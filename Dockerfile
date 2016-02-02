@@ -12,7 +12,7 @@ RUN apt-get update \
     bcmath \
     zip \
  && docker-php-ext-configure gd --with-jpeg-dir=/usr/lib \
- && docker-php-ext-install
+ && docker-php-ext-install \
     gd \
     exif \
  && docker-php-ext-enable \
