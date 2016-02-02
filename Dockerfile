@@ -5,12 +5,16 @@ RUN apt-get update \
     zlib1g-dev \
     supervisor \
     libpng12-dev \
-  && docker-php-ext-install \
+    libjpeg-dev \
+ && docker-php-ext-install \
     pdo_mysql \
     mbstring \
     bcmath \
     zip \
+ && docker-php-ext-configure gd --with-jpeg-dir=/usr/lib \
+ && docker-php-ext-install
     gd \
+    exif \
  && docker-php-ext-enable \
     opcache \
  && apt-get clean \
