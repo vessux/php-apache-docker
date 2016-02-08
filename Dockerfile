@@ -5,6 +5,7 @@ RUN apt-get update \
     zlib1g-dev \
     supervisor \
     libpng12-dev \
+    libjpeg62-turbo \
     libjpeg-dev \
  && docker-php-ext-install \
     pdo_mysql \
