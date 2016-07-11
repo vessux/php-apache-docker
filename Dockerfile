@@ -4,6 +4,7 @@ RUN apt-get update \
     git \
     zlib1g-dev \
     supervisor \
+    libmcrypt-dev \
     libpng12-dev \
     libjpeg62-turbo \
     libjpeg-dev \
@@ -12,6 +13,7 @@ RUN apt-get update \
     mbstring \
     bcmath \
     zip \
+    mcrypt \
  && docker-php-ext-configure gd --with-jpeg-dir=/usr/lib \
  && docker-php-ext-install \
     gd \
