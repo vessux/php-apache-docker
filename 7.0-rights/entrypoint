@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+usermod -u $USER_ID $USER_NAME
+groupmod -g $GROUP_ID $GROUP_NAME
+
+# first arg is `-f` or `--some-option`
+if [ "${1#-}" != "$1" ]; then
+	set -- apache2-foreground "$@"
+fi
+
+exec "$@"

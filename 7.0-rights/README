@@ -1,0 +1,8 @@
+# php-apache-docker:7.0-rights
+Preset environment values:
+- USER_ID="33"
+- USER_NAME="www-data"
+- GROUP_ID="33"
+- GROUP_NAME="www-data"
+
+Override user and group id with your desired values for local developement (usually your local user)
